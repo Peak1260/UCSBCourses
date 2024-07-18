@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>UCSB Coursework Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to UCSB Coursework Portfolio!</h1>
+        <p>Step into the Future of Computer Engineering</p>
+    </header>
+    <main>
+        <section class="courses">
+            <h2>My Courses</h2>
+            <div class="course-list">
+                {% for course in courses %}
+                <div class="course-card">
+                    <h3>{{ course.title }}</h3>
+                    <p>{{ course.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 UCSB Coursework Portfolio</p>
+    </footer>
+</body>
+</html>
